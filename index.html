@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090c13"><meta name="description" content="Quran Al-Kareem — Read the Quran. Understand Its Meaning. Follow Its Guidance.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <title>Quran Al-Kareem | القرآن الكريم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar" aria-label="Surah navigation">
+    <div class="brand"><div class="brand-mark">۞</div><div><strong>Quran Al-Kareem</strong><span>القرآن الكريم</span></div><button class="icon-btn close-sidebar" id="closeSidebar" aria-label="Close menu">✕</button></div>
+    <div class="side-intro"><span class="eyebrow" data-i18n="journey">YOUR DAILY JOURNEY</span><h2 data-i18n="readQuran">Read the Quran</h2><p data-i18n="sideTag">A moment of peace, a lifetime of guidance.</p></div>
+    <label class="search-wrap"><span>⌕</span><input id="surahSearch" type="search" placeholder="সূরা খুঁজুন..." data-i18n-placeholder="searchSurah" aria-label="Search Surahs"></label>
+    <div class="surah-list-heading"><span data-i18n="allSurahs">সকল সূরা</span><span class="count-pill" id="surahCount">114</span></div>
+    <div class="surah-list" id="surahList"><div class="skeleton">সূরার তালিকা লোড হচ্ছে…</div></div>
+    <div class="sidebar-footer"><span class="footer-star">✦</span><span data-i18n="footerQuote">“Indeed, in the remembrance of Allah do hearts find rest.”</span><small>Ar-Ra'd 13:28</small></div>
+  </aside>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+  <main class="main-area">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuButton" aria-label="Open Surah menu">☰</button>
+      <div class="current-heading"><span class="eyebrow" data-i18n="nowReading">NOW READING</span><div><strong id="currentSurahTop">সূরা আল-ফাতিহা</strong><span id="currentSurahMeta">৭ আয়াত · মাক্কী</span></div></div>
+      <div class="toolbar">
+        <button class="tool-btn icon-only" id="themeToggle" title="ডার্ক/লাইট মোড" aria-label="ডার্ক/লাইট মোড"><span id="themeIcon">☾</span></button>
+        <button class="tool-btn translation-btn active" id="translationToggle" aria-pressed="true" title="Show or hide translation"><span>☷</span><span data-i18n="translation">অনুবাদ</span><i class="state-dot"></i></button>
+        <div class="font-tools" aria-label="Arabic font size"><button class="tool-btn compact" id="fontDown" aria-label="Decrease Arabic font size">A−</button><button class="tool-btn compact" id="fontUp" aria-label="Increase Arabic font size">A+</button></div>
+        
+        <select id="languageSelect" class="language-select" aria-label="Interface language"><option value="bn">বাংলা</option><option value="en">English</option><option value="ar">العربية</option></select>
+        <button class="tool-btn icon-only" id="homeButton" title="Home" aria-label="Home">⌂</button>
+        <button class="tool-btn icon-only" id="bookmarksButton" title="Bookmarks" aria-label="Bookmarks">♡<span class="bookmark-count" id="bookmarkCount">0</span></button>
+        <button class="tool-btn tasbih-nav-btn" id="tasbihButton" title="তাসবিহ খুলুন" aria-label="তাসবিহ খুলুন"><span class="tasbih-nav-icon">☪</span><span class="tasbih-nav-label">তাসবিহ</span></button>
+      </div>
+    </header>
+    <section class="content" id="mainContent">
+      <div class="welcome-strip"><div class="welcome-icon">✦</div><div><strong data-i18n="welcome">A little time with the Quran changes everything.</strong><p data-i18n="welcomeSub">Read slowly. Reflect deeply. Carry its light with you.</p></div><span class="ornament">۞</span></div>
+      <section class="featured-section" aria-labelledby="featuredTitle">
+        <div class="section-heading"><div class="ornament-line"></div><div><h2 id="featuredTitle">গুরুত্বপূর্ণ ও ফজিলতপূর্ণ সূরাসমূহ</h2><p>কুরআন পড়ুন, শুনুন এবং অর্থ নিয়ে ভাবুন</p></div><div class="ornament-line"></div></div>
+        <div class="featured-grid" id="featuredSurahs"></div>
+      </section>
+      <section class="names-section" aria-labelledby="namesTitle">
+        <div class="section-heading"><div class="ornament-line"></div><div><h2 id="namesTitle">আল্লাহর ৯৯টি সুন্দর নাম</h2><p>আসমাউল হুসনা — অর্থসহ</p></div><div class="ornament-line"></div></div>
+        <div class="names-grid" id="allahNames"></div>
+      </section>
+      <section class="surah-hero" id="surahHero">
+        <div class="hero-pattern"></div><div class="hero-kicker"><span class="gold-line"></span><span data-i18n="theNobleQuran">THE NOBLE QURAN</span><span class="gold-line"></span></div>
+        <h1 id="surahArabicName" lang="ar" dir="rtl">الْفَاتِحَة</h1><h2 id="surahDisplayName">সূরা আল-ফাতিহা</h2><p class="hero-translit" id="surahTranslit">The Opening</p>
+        <div class="surah-facts"><span><b>◈</b><span id="revelationType">মাক্কী</span></span><span class="fact-divider"></span><span><b>۞</b><span id="verseCount">৭ আয়াত</span></span><span class="fact-divider"></span><span><b>◷</b><span id="juzInfo">জুয ১</span></span></div>
+        <div class="hero-actions"><button class="outline-btn" id="prevSurah">← <span data-i18n="previous">পূর্ববর্তী</span></button><button class="gold-btn" id="continueReading">▶ <span data-i18n="continue">পড়া চালিয়ে যান</span></button><button class="outline-btn" id="playSurahButton">♫ পুরো সূরা শুনুন</button><button class="outline-btn" id="nextSurah"><span data-i18n="next">পরবর্তী</span> →</button></div>
+      </section>
+      <div class="reading-toolbar"><div><span class="eyebrow" data-i18n="verses">VERSES</span><h3 data-i18n="reflection">Read &amp; Reflect</h3></div><label class="jump-control"><span data-i18n="jumpToVerse">আয়াতে যান</span><input id="verseJump" type="number" min="1" placeholder="1" aria-label="Verse number"><button id="jumpButton" class="small-gold-btn" data-i18n="go">যান</button></label></div>
+      <div class="status-message" id="statusMessage" role="status" aria-live="polite"></div>
+      <div class="verse-list" id="verseList"><div class="loading-card"><span class="loader"></span><p data-i18n="loading">পবিত্র আয়াত লোড হচ্ছে…</p></div></div>
+      <footer class="page-footer"><span>۞</span><p data-i18n="footerText">May the Quran illuminate your heart and guide your steps.</p><span>۞</span></footer>
+    </section>
+  </main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close icon-btn" id="modalClose" aria-label="Close">✕</button><div id="modalContent"></div></section></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="js/app.js"></script><script type="module" src="js/home-sections.js"></script>
+</body></html>
